@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>artist.garry // Animation & Motion Graphics Visual Studio</title>
+  <meta name="description" content="Official Portfolio of artist.garry (@Artist.gxrry) - Commercial Advertising Poster Artist, Motion Graphics & Visual Alchemist.">
+  <meta property="og:title" content="artist.garry // Motion & Visual Art Studio">
+  <meta property="og:description" content="Explore bold commercial ads, sneaker editorials, vector illustrations, and spiritual digital paintings.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- GSAP & Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <span class="cursor-text" id="cursorText">POP!</span>
+  </div>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-box">
+      <div class="mascot-eyes" style="padding: 4px 8px; margin-bottom: 4px;">
+        <div class="mascot-eye" style="width: 18px; height: 18px;"><div class="mascot-pupil" style="width: 7px; height: 7px;"></div></div>
+        <div class="mascot-eye" style="width: 18px; height: 18px;"><div class="mascot-pupil" style="width: 7px; height: 7px;"></div></div>
+      </div>
+      <div class="preloader-counter" id="preloaderCounter">0%</div>
+      <div class="preloader-bar-wrapper">
+        <div class="preloader-bar" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-tag">COOKING MOTION GRAPHICS</div>
+    </div>
+  </div>
+
+  <!-- Floating Navigation Dock -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-dock" id="navDock">
+        <a href="#hero" class="nav-logo hover-target">
+          <div class="mascot-eyes">
+            <div class="mascot-eye"><div class="mascot-pupil" id="pupilLeft"></div></div>
+            <div class="mascot-eye"><div class="mascot-pupil" id="pupilRight"></div></div>
+          </div>
+          <span>artist.garry</span>
+          <span class="logo-badge">STUDIO</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#featured" class="hover-target">Spotlight</a></li>
+          <li><a href="#archive" class="hover-target">Archive (19)</a></li>
+          <li><a href="#sticker-lab" class="hover-target">Playground</a></li>
+          <li><a href="#process" class="hover-target">Method</a></li>
+          <li><a href="#pricing" class="hover-target">Commissions</a></li>
+          <li><a href="#about" class="hover-target">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>OPEN FOR COMMISSIONS</span>
+          </div>
+
+          <button class="sound-toggle-btn hover-target" id="soundToggleBtn" title="Toggle Cartoon Sound FX" aria-label="Toggle Sound">
+            <i data-lucide="volume-2" style="width: 18px; height: 18px;"></i>
+          </button>
+
+          <a href="#contact" class="btn-primary hover-target" style="padding: 10px 20px; font-size: 13px;">
+            Let's Talk ✦
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-eyebrow hero-anim">
+              <span style="color: var(--accent-orange);">✱</span>
+              <span>MOTION & GRAPHIC DESIGN STUDIO</span>
+            </div>
+
+            <h1 class="hero-headline hero-anim">
+              VISUAL ALCHEMY & <span class="highlight-pill">MOTION</span> <span class="serif-flair">Magic.</span>
+            </h1>
+
+            <p class="hero-description hero-anim">
+              Warm, punchy, and characterful visual arts crafted by <strong>Garry</strong>. Specializing in high-voltage product advertising, sneaker editorials, custom vector character art, and Sikh heritage paintings.
+            </p>
+
+            <div class="hero-actions hero-anim">
+              <a href="#featured" class="btn-primary hover-target" id="heroCtaWorks">
+                <span>Explore Works (19)</span>
+                <i data-lucide="sparkles"></i>
+              </a>
+              <a href="#pricing" class="btn-secondary hover-target" id="heroCtaPricing">
+                <span>Commission Rates</span>
+                <i data-lucide="arrow-down-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual-card hero-anim" id="heroCardContainer">
+            <div class="cartoon-sticker sticker-pos-1">
+              <span>✦ SHER-E-KHALSA</span>
+            </div>
+
+            <div class="collector-frame hover-view open-lightbox" id="hero3dCard" data-img="assets/works/12_sher_e_khalsa_punjab.jpg" data-title="SHER-E-KHALSA // BABA DEEP SINGH JI">
+              <div class="collector-art-wrap">
+                <img src="assets/works/12_sher_e_khalsa_punjab.jpg" alt="Sher-E-Khalsa Baba Deep Singh Ji" class="collector-img">
+              </div>
+              <div class="collector-footer">
+                <div>
+                  <h3 class="collector-title">SHER-E-KHALSA</h3>
+                  <span class="collector-cat">Heritage Digital Painting</span>
+                </div>
+                <span class="logo-badge" style="background: var(--accent-blue); color: #FFF;">SPOTLIGHT // 01</span>
+              </div>
+            </div>
+
+            <div class="cartoon-sticker sticker-pos-2">
+              <span>★ PUNJAB HERITAGE</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCROLL-COUPLED VELOCITY MARQUEE RIBBONS
+         ========================================================================== -->
+    <section class="marquee-container" aria-hidden="true">
+      <div class="marquee-ribbon" id="marqueeRibbon1">
+        <div class="marquee-content">
+          <span>MOTION DESIGN</span>
+          <span class="marquee-star">✦</span>
+          <span>COMMERCIAL ADS</span>
+          <span class="marquee-star">★</span>
+          <span>HERITAGE SIKH ART</span>
+          <span class="marquee-star">✦</span>
+          <span>VECTOR ART</span>
+          <span class="marquee-star">★</span>
+        </div>
+        <div class="marquee-content">
+          <span>MOTION DESIGN</span>
+          <span class="marquee-star">✦</span>
+          <span>COMMERCIAL ADS</span>
+          <span class="marquee-star">★</span>
+          <span>HERITAGE SIKH ART</span>
+          <span class="marquee-star">✦</span>
+          <span>VECTOR ART</span>
+          <span class="marquee-star">★</span>
+        </div>
+        <div class="marquee-content">
+          <span>MOTION DESIGN</span>
+          <span class="marquee-star">✦</span>
+          <span>COMMERCIAL ADS</span>
+          <span class="marquee-star">★</span>
+          <span>HERITAGE SIKH ART</span>
+          <span class="marquee-star">✦</span>
+          <span>VECTOR ART</span>
+          <span class="marquee-star">★</span>
+        </div>
+        <div class="marquee-content">
+          <span>MOTION DESIGN</span>
+          <span class="marquee-star">✦</span>
+          <span>COMMERCIAL ADS</span>
+          <span class="marquee-star">★</span>
+          <span>HERITAGE SIKH ART</span>
+          <span class="marquee-star">✦</span>
+          <span>VECTOR ART</span>
+          <span class="marquee-star">★</span>
+        </div>
+      </div>
+
+      <div class="marquee-ribbon marquee-ribbon-reverse" id="marqueeRibbon2">
+        <div class="marquee-content">
+          <span>SHER-E-KHALSA</span>
+          <span class="marquee-star">⚡</span>
+          <span>1969 FORD MUSTANG</span>
+          <span class="marquee-star">⚡</span>
+          <span>NIKE KD17</span>
+          <span class="marquee-star">⚡</span>
+          <span>BEAST LIFE</span>
+          <span class="marquee-star">⚡</span>
+        </div>
+        <div class="marquee-content">
+          <span>SHER-E-KHALSA</span>
+          <span class="marquee-star">⚡</span>
+          <span>1969 FORD MUSTANG</span>
+          <span class="marquee-star">⚡</span>
+          <span>NIKE KD17</span>
+          <span class="marquee-star">⚡</span>
+          <span>BEAST LIFE</span>
+          <span class="marquee-star">⚡</span>
+        </div>
+        <div class="marquee-content">
+          <span>SHER-E-KHALSA</span>
+          <span class="marquee-star">⚡</span>
+          <span>1969 FORD MUSTANG</span>
+          <span class="marquee-star">⚡</span>
+          <span>NIKE KD17</span>
+          <span class="marquee-star">⚡</span>
+          <span>BEAST LIFE</span>
+          <span class="marquee-star">⚡</span>
+        </div>
+        <div class="marquee-content">
+          <span>SHER-E-KHALSA</span>
+          <span class="marquee-star">⚡</span>
+          <span>1969 FORD MUSTANG</span>
+          <span class="marquee-star">⚡</span>
+          <span>NIKE KD17</span>
+          <span class="marquee-star">⚡</span>
+          <span>BEAST LIFE</span>
+          <span class="marquee-star">⚡</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SPOTLIGHT CASE STUDIES (COLLECTOR ALBUMS)
+         ========================================================================== -->
+    <section class="section" id="featured">
+      <div class="container">
+        
+        <div class="section-header">
+          <div>
+            <div class="section-tag">
+              <i data-lucide="star" style="width: 13px; height: 13px;"></i>
+              <span>CURATED SPOTLIGHT</span>
+            </div>
+            <h2 class="section-title">
+              SPOTLIGHT <span class="serif-flair">Case Studies</span>
+            </h2>
+          </div>
+          <p style="max-width: 340px; color: var(--text-secondary); font-size: 14px; font-weight: 500;">
+            A deep-dive into advertising campaigns, retro automotive editorials, and cultural storytelling.
+          </p>
+        </div>
+
+        <!-- Spotlight 01: Sher-E-Khalsa (First in Album) -->
+        <article class="featured-album-card">
+          <div class="featured-card-grid">
+            
+            <div>
+              <span class="album-num-badge" style="background: var(--accent-blue);">ALBUM 01 // 05</span>
+              <h3 class="album-title">SHER-E-KHALSA // BABA DEEP SINGH JI</h3>
+              <p class="album-desc">
+                An inspiring historical montage digitally composed inside the territorial outline of Punjab. Features Shaheed Baba Deep Singh Ji, the roaring Khalsa lion, golden wheat fields, and authentic Gurmukhi calligraphy.
+              </p>
+
+              <div class="swatch-group">
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #1c4b78;"></div><span>#1C4B78</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #d49339;"></div><span>#D49339</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #f7f6f2;"></div><span>#F7F6F2</span></div>
+              </div>
+
+              <div class="album-specs">
+                <div>HERITAGE: <strong>Sikh History & Culture</strong></div>
+                <div>BY: <strong>Pind Dia Gallan</strong></div>
+                <div>COMPOSITION: <strong>Punjab Map Silhouette</strong></div>
+                <div>STYLE: <strong>Digital Painting</strong></div>
+              </div>
+
+              <button class="btn-primary hover-target open-lightbox" data-img="assets/works/12_sher_e_khalsa_punjab.jpg" data-title="SHER-E-KHALSA // BABA DEEP SINGH JI DIGITAL PAINTING">
+                <span>View Full Art</span>
+                <i data-lucide="maximize-2"></i>
+              </button>
+            </div>
+
+            <div class="curated-art-frame hover-view open-lightbox" data-img="assets/works/12_sher_e_khalsa_punjab.jpg" data-title="SHER-E-KHALSA // BABA DEEP SINGH JI DIGITAL PAINTING">
+              <img src="assets/works/12_sher_e_khalsa_punjab.jpg" alt="Sher-E-Khalsa Baba Deep Singh Ji">
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Spotlight 02: Guru Nanak Dev Ji Parkash Purab -->
+        <article class="featured-album-card">
+          <div class="featured-card-grid">
+            
+            <div>
+              <span class="album-num-badge" style="background: var(--accent-yellow); color: #1E1815;">ALBUM 02 // 05</span>
+              <h3 class="album-title">PARKASH PURAB // CELESTIAL JOURNEY</h3>
+              <p class="album-desc">
+                An ethereal sacred tribute commemorating the Parkash Purab of Sri Guru Nanak Dev Ji. Depicts the golden Darbar Sahib (Harmandir Sahib), holy celestial footsteps illuminating the Earth, radiant cosmic halo, and sacred Gurmukhi scriptures.
+              </p>
+
+              <div class="swatch-group">
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #d49b42;"></div><span>#D49B42</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #173a5e;"></div><span>#173A5E</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #fcf9f2;"></div><span>#FCF9F2</span></div>
+              </div>
+
+              <div class="album-specs">
+                <div>HERITAGE: <strong>Sikh Sacred Art</strong></div>
+                <div>THEME: <strong>Parkash Purab 555</strong></div>
+                <div>ELEMENTS: <strong>Darbar Sahib & Globe</strong></div>
+                <div>STYLE: <strong>Divine Digital Art</strong></div>
+              </div>
+
+              <button class="btn-primary hover-target open-lightbox" data-img="assets/works/15_guru_nanak_parkash_purab.jpg" data-title="PARKASH PURAB // CELESTIAL JOURNEY">
+                <span>View Full Art</span>
+                <i data-lucide="maximize-2"></i>
+              </button>
+            </div>
+
+            <div class="curated-art-frame hover-view open-lightbox" data-img="assets/works/15_guru_nanak_parkash_purab.jpg" data-title="PARKASH PURAB // CELESTIAL JOURNEY">
+              <img src="assets/works/15_guru_nanak_parkash_purab.jpg" alt="Parkash Purab Celestial Journey">
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Spotlight 03: Mega Sale Headset -->
+        <article class="featured-album-card">
+          <div class="featured-card-grid">
+            
+            <div>
+              <span class="album-num-badge" style="background: var(--accent-green); color: #FFF;">ALBUM 03 // 05</span>
+              <h3 class="album-title">MEGA SALE // CLOUD FLOATING HEADPHONES</h3>
+              <p class="album-desc">
+                A clean, serene e-commerce advertising visual featuring sage green wireless over-ear headphones floating effortlessly through soft photorealistic dream clouds. Complemented by bold typography callouts, 50% off discount badges, and "Shop Now" pill triggers.
+              </p>
+
+              <div class="swatch-group">
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #6b8478;"></div><span>#6B8478</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #e2ebd8;"></div><span>#E2EBD8</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #1e2421;"></div><span>#1E2421</span></div>
+              </div>
+
+              <div class="album-specs">
+                <div>PRODUCT: <strong>Wireless ANC Headset</strong></div>
+                <div>CAMPAIGN: <strong>Mega Sale 50% Off</strong></div>
+                <div>AESTHETIC: <strong>Cloud Surrealism</strong></div>
+                <div>FOCUS: <strong>Call-to-Action & Price</strong></div>
+              </div>
+
+              <button class="btn-primary hover-target open-lightbox" data-img="assets/works/07_mega_sale_headphones.jpg" data-title="MEGA SALE // CLOUD FLOATING HEADPHONES">
+                <span>View Full Art</span>
+                <i data-lucide="maximize-2"></i>
+              </button>
+            </div>
+
+            <div class="curated-art-frame hover-view open-lightbox" data-img="assets/works/07_mega_sale_headphones.jpg" data-title="MEGA SALE // CLOUD FLOATING HEADPHONES">
+              <img src="assets/works/07_mega_sale_headphones.jpg" alt="Mega Sale Wireless Headphones">
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Spotlight 04: 1969 Ford Mustang -->
+        <article class="featured-album-card">
+          <div class="featured-card-grid">
+            
+            <div>
+              <span class="album-num-badge" style="background: var(--accent-orange);">ALBUM 04 // 05</span>
+              <h3 class="album-title">1969 FORD MUSTANG // VINTAGE EDITORIAL</h3>
+              <p class="album-desc">
+                "Born to Roar, Built to Last" — A tribute editorial poster celebrating the iconic American muscle car. Features a clean 3D isometric cut-out background stage, sharp specs callouts, and striking crimson palette.
+              </p>
+
+              <div class="swatch-group">
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #e61e2b;"></div><span>#E61E2B</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #ffffff;"></div><span>#FFFFFF</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #2a0508;"></div><span>#2A0508</span></div>
+              </div>
+
+              <div class="album-specs">
+                <div>SERIES: <strong>Vintage Muscle</strong></div>
+                <div>TOOLS: <strong>Photoshop / Typography</strong></div>
+                <div>ELEMENTS: <strong>Spec Sheet Callout</strong></div>
+                <div>BY: <strong>Artist Gxrry</strong></div>
+              </div>
+
+              <button class="btn-primary hover-target open-lightbox" data-img="assets/works/17_ford_mustang_1969.jpg" data-title="1969 FORD MUSTANG // VINTAGE EDITORIAL">
+                <span>View Full Art</span>
+                <i data-lucide="maximize-2"></i>
+              </button>
+            </div>
+
+            <div class="curated-art-frame hover-view open-lightbox" data-img="assets/works/17_ford_mustang_1969.jpg" data-title="1969 FORD MUSTANG // VINTAGE EDITORIAL">
+              <img src="assets/works/17_ford_mustang_1969.jpg" alt="1969 Ford Mustang Poster">
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Spotlight 05: Nike KD17 EP -->
+        <article class="featured-album-card">
+          <div class="featured-card-grid">
+            
+            <div>
+              <span class="album-num-badge" style="background: var(--accent-purple);">ALBUM 05 // 05</span>
+              <h3 class="album-title">NIKE KD17 EP // SNEAKER POSTER</h3>
+              <p class="album-desc">
+                An elegant, modern athletic sneaker advertisement for Nike KD17 EP. Features multi-angle product inset cards, colorway swatch selectors, and a refined lavender perspective runway.
+              </p>
+
+              <div class="swatch-group">
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #735b91;"></div><span>#735B91</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #bcc3d4;"></div><span>#BCC3D4</span></div>
+                <div class="swatch-pill"><div class="swatch-dot" style="background: #ffffff;"></div><span>#FFFFFF</span></div>
+              </div>
+
+              <div class="album-specs">
+                <div>BRAND: <strong>Nike Basketball</strong></div>
+                <div>MODEL: <strong>KD17 EP</strong></div>
+                <div>DETAILS: <strong>4-Angle Insets</strong></div>
+                <div>MOOD: <strong>Lavender Athletic</strong></div>
+              </div>
+
+              <button class="btn-primary hover-target open-lightbox" data-img="assets/works/18_nike_kd17_basketball.jpg" data-title="NIKE KD17 EP // SNEAKER CAMPAIGN">
+                <span>View Full Art</span>
+                <i data-lucide="maximize-2"></i>
+              </button>
+            </div>
+
+            <div class="curated-art-frame hover-view open-lightbox" data-img="assets/works/18_nike_kd17_basketball.jpg" data-title="NIKE KD17 EP // SNEAKER CAMPAIGN">
+              <img src="assets/works/18_nike_kd17_basketball.jpg" alt="Nike KD17 Basketball Shoe">
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FILTERABLE VISUAL GALLERY / ARCHIVE (ALL 19 WORKS)
+         ========================================================================== -->
+    <section class="section" id="archive" style="background: var(--bg-canvas-subtle); border-top: 3px solid var(--border-dark); border-bottom: 3px solid var(--border-dark);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div>
+            <div class="section-tag">
+              <i data-lucide="grid" style="width: 13px; height: 13px;"></i>
+              <span>COMPLETE CREATIVE CATALOG</span>
+            </div>
+            <h2 class="section-title">
+              VISUAL <span class="serif-flair">Archive (19 Works)</span>
+            </h2>
+          </div>
+          <p style="max-width: 340px; color: var(--text-secondary); font-size: 14px; font-weight: 500;">
+            Click on category pills to filter through all 19 artworks. Click any item for fullscreen inspection.
+          </p>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="filter-tabs-wrapper">
+          <button class="filter-btn active hover-target" data-filter="all">
+            <span>✦ All Works</span>
+            <span class="filter-count">19</span>
+          </button>
+          <button class="filter-btn hover-target" data-filter="ads">
+            <span>🥤 Product & Ads</span>
+            <span class="filter-count">11</span>
+          </button>
+          <button class="filter-btn hover-target" data-filter="sneakers">
+            <span>👟 Automotive & Sneakers</span>
+            <span class="filter-count">3</span>
+          </button>
+          <button class="filter-btn hover-target" data-filter="spiritual">
+            <span>⚔️ Heritage & Spiritual</span>
+            <span class="filter-count">3</span>
+          </button>
+          <button class="filter-btn hover-target" data-filter="vector">
+            <span>✏️ Vector Art</span>
+            <span class="filter-count">1</span>
+          </button>
+          <button class="filter-btn hover-target" data-filter="luxury">
+            <span>💎 Luxury & Jewelry</span>
+            <span class="filter-count">3</span>
+          </button>
+        </div>
+
+        <!-- Seamless Poster Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <!-- 01: Beast Life -->
+          <div class="gallery-item hover-view open-lightbox" data-index="0" data-category="ads" data-img="assets/works/01_beast_life_whey_protein.jpg" data-title="BEAST LIFE // WHEY PROTEIN COMMERCIAL AD">
+            <img src="assets/works/01_beast_life_whey_protein.jpg" alt="Beast Life Whey Protein" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Product Ad</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">BEAST LIFE</h3>
+                <span class="gallery-item-sub">High-Voltage Fitness Poster</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02: Starbucks -->
+          <div class="gallery-item hover-view open-lightbox" data-index="1" data-category="ads" data-img="assets/works/02_starbucks_frappuccino.jpg" data-title="STARBUCKS // DELICIOUS COFFEE SPLASH">
+            <img src="assets/works/02_starbucks_frappuccino.jpg" alt="Starbucks Coffee Poster" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Beverage Ad</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">STARBUCKS</h3>
+                <span class="gallery-item-sub">Iced Frappuccino Splash</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03: Salvest -->
+          <div class="gallery-item hover-view open-lightbox" data-index="2" data-category="ads" data-img="assets/works/03_salvest_juice_splash.jpg" data-title="SALVEST MAHLAKAS // BLUEBERRY JUICE">
+            <img src="assets/works/03_salvest_juice_splash.jpg" alt="Salvest Juice Splash" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Splash Art</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">SALVEST JUICE</h3>
+                <span class="gallery-item-sub">Blueberry Splash Explosion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04: Sakura Perfume -->
+          <div class="gallery-item hover-view open-lightbox" data-index="3" data-category="ads luxury" data-img="assets/works/04_sakura_perfume_luxury.jpg" data-title="SAKURA FOR WOMEN // LUXURY PERFUME">
+            <img src="assets/works/04_sakura_perfume_luxury.jpg" alt="Sakura Women Perfume" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Luxury Perfume</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">SAKURA FOR WOMEN</h3>
+                <span class="gallery-item-sub">Mountain Lake & Blossoms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05: Yumm Bakery -->
+          <div class="gallery-item hover-view open-lightbox" data-index="4" data-category="ads" data-img="assets/works/05_yumm_bakery_cupcake.jpg" data-title="YUMM BAKERY // CHOCOLATE CUPCAKE">
+            <img src="assets/works/05_yumm_bakery_cupcake.jpg" alt="Yumm Bakery Cupcake" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Food Ad</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">YUMM BAKERY</h3>
+                <span class="gallery-item-sub">Chocolate Splash Cupcake</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06: Lune Skincare -->
+          <div class="gallery-item hover-view open-lightbox" data-index="5" data-category="ads luxury" data-img="assets/works/06_lune_lavender_skincare.jpg" data-title="LUNE // LAVENDER SKINCARE BOTTLE">
+            <img src="assets/works/06_lune_lavender_skincare.jpg" alt="Lune Lavender Serum" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Skincare</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">LUNE SKINCARE</h3>
+                <span class="gallery-item-sub">Purple Velvet Luxury Serum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 07: Mega Sale Headset -->
+          <div class="gallery-item hover-view open-lightbox" data-index="6" data-category="ads" data-img="assets/works/07_mega_sale_headphones.jpg" data-title="MEGA SALE // CLOUD FLOATING HEADPHONES">
+            <img src="assets/works/07_mega_sale_headphones.jpg" alt="Mega Sale Wireless Headphones" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Tech Ad</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">HEADSET AD</h3>
+                <span class="gallery-item-sub">Sage Green Cloud Surrealism</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 08: New Balance 9060 -->
+          <div class="gallery-item hover-view open-lightbox" data-index="7" data-category="sneakers" data-img="assets/works/08_new_balance_editorial.jpg" data-title="NEW BALANCE // EDITORIAL SNEAKER POSTER">
+            <img src="assets/works/08_new_balance_editorial.jpg" alt="New Balance 9060" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Sneakers</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">NEW BALANCE 9060</h3>
+                <span class="gallery-item-sub">Vintage Paper Editorial</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 09: Everyuth Naturals -->
+          <div class="gallery-item hover-view open-lightbox" data-index="8" data-category="ads" data-img="assets/works/09_everyuth_lemon_cherry.jpg" data-title="EVERYUTH NATURALS // LEMON & CHERRY">
+            <img src="assets/works/09_everyuth_lemon_cherry.jpg" alt="Everyuth Face Wash" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Cosmetics</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">EVERYUTH NATURALS</h3>
+                <span class="gallery-item-sub">Lemon & Cherry Splash Ad</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10: Apna Burger Wala -->
+          <div class="gallery-item hover-view open-lightbox" data-index="9" data-category="ads" data-img="assets/works/10_apna_burger_bacon.jpg" data-title="APNA BURGER WALA // BIG BACON BURGER">
+            <img src="assets/works/10_apna_burger_bacon.jpg" alt="Apna Burger Wala" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Fast Food</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">APNA BURGER WALA</h3>
+                <span class="gallery-item-sub">Big Bacon Burger Depth Ad</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11: Apna Chicken Corner -->
+          <div class="gallery-item hover-view open-lightbox" data-index="10" data-category="ads" data-img="assets/works/11_apna_chicken_bucket.jpg" data-title="APNA CHICKEN CORNER // CRISPY BUCKET">
+            <img src="assets/works/11_apna_chicken_bucket.jpg" alt="Apna Chicken Corner" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Fast Food</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">CHICKEN CORNER</h3>
+                <span class="gallery-item-sub">Crispy Bucket Stage Ad</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12: Sher-E-Khalsa -->
+          <div class="gallery-item hover-view open-lightbox" data-index="11" data-category="spiritual" data-img="assets/works/12_sher_e_khalsa_punjab.jpg" data-title="SHER-E-KHALSA // BABA DEEP SINGH JI">
+            <img src="assets/works/12_sher_e_khalsa_punjab.jpg" alt="Sher-E-Khalsa Punjab" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Heritage Art</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">SHER-E-KHALSA</h3>
+                <span class="gallery-item-sub">Baba Deep Singh Ji Painting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13: Guru Nanak Dev Ji Cosmic -->
+          <div class="gallery-item hover-view open-lightbox" data-index="12" data-category="spiritual" data-img="assets/works/13_guru_nanak_cosmic.jpg" data-title="GURU NANAK DEV JI // COSMIC BLESSING">
+            <img src="assets/works/13_guru_nanak_cosmic.jpg" alt="Guru Nanak Dev Ji Cosmic Art" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Spiritual Art</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">GURU NANAK DEV JI</h3>
+                <span class="gallery-item-sub">Cosmic Blessing Portrait</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14: Vector Portrait Gxrry -->
+          <div class="gallery-item hover-view open-lightbox" data-index="13" data-category="vector" data-img="assets/works/14_vector_portrait_gxrry.jpg" data-title="ARTIST GXRRY // VECTOR PORTRAIT">
+            <img src="assets/works/14_vector_portrait_gxrry.jpg" alt="Vector Art Portrait by Artist Gxrry" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Vector Art</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">ARTIST GXRRY</h3>
+                <span class="gallery-item-sub">Father & Son Vector Portrait</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15: Guru Nanak Parkash Purab -->
+          <div class="gallery-item hover-view open-lightbox" data-index="14" data-category="spiritual" data-img="assets/works/15_guru_nanak_parkash_purab.jpg" data-title="PARKASH PURAB // CELESTIAL JOURNEY">
+            <img src="assets/works/15_guru_nanak_parkash_purab.jpg" alt="Parkash Purab Spiritual Art" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Sacred Art</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">PARKASH PURAB</h3>
+                <span class="gallery-item-sub">Celestial Journey Montage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 16: Mamaearth Charcoal -->
+          <div class="gallery-item hover-view open-lightbox" data-index="15" data-category="ads" data-img="assets/works/16_mamaearth_charcoal_facewash.jpg" data-title="MAMAEARTH // CHARCOAL FACE WASH">
+            <img src="assets/works/16_mamaearth_charcoal_facewash.jpg" alt="Mamaearth Charcoal Face Wash" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Cosmetics</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">MAMAEARTH</h3>
+                <span class="gallery-item-sub">Charcoal & Coffee Face Wash</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 17: Ford Mustang 1969 -->
+          <div class="gallery-item hover-view open-lightbox" data-index="16" data-category="sneakers" data-img="assets/works/17_ford_mustang_1969.jpg" data-title="1969 FORD MUSTANG // VINTAGE EDITORIAL">
+            <img src="assets/works/17_ford_mustang_1969.jpg" alt="Ford Mustang 1969 Poster" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Automotive</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">1969 FORD MUSTANG</h3>
+                <span class="gallery-item-sub">Vintage Muscle Editorial</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 18: Nike KD17 EP -->
+          <div class="gallery-item hover-view open-lightbox" data-index="17" data-category="sneakers" data-img="assets/works/18_nike_kd17_basketball.jpg" data-title="NIKE KD17 EP // SNEAKER CAMPAIGN">
+            <img src="assets/works/18_nike_kd17_basketball.jpg" alt="Nike KD17 EP Basketball Shoe" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Sneakers</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">NIKE KD17 EP</h3>
+                <span class="gallery-item-sub">Basketball Sneaker Campaign</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 19: Apna Jewellers -->
+          <div class="gallery-item hover-view open-lightbox" data-index="18" data-category="ads luxury" data-img="assets/works/19_apna_jewellers_gold_neon.jpg" data-title="APNA JEWELLERS // GOLD & NEON">
+            <img src="assets/works/19_apna_jewellers_gold_neon.jpg" alt="Apna Jewellers Neon Showcase" class="gallery-thumb" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-top">
+                <span class="gallery-category-pill">Luxury Display</span>
+                <div class="gallery-view-icon"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></div>
+              </div>
+              <div class="gallery-overlay-bottom">
+                <h3 class="gallery-item-title">APNA JEWELLERS</h3>
+                <span class="gallery-item-sub">24K Gold & Glowing Neon</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE "CARTOON STICKER LAB" WIDGET (PLAYGROUND)
+         ========================================================================== -->
+    <section class="section" id="sticker-lab">
+      <div class="container">
+        
+        <div class="section-header">
+          <div>
+            <div class="section-tag">
+              <i data-lucide="sparkles" style="width: 13px; height: 13px;"></i>
+              <span>INTERACTIVE PLAYGROUND</span>
+            </div>
+            <h2 class="section-title">
+              CARTOON <span class="serif-flair">Sticker Lab</span>
+            </h2>
+          </div>
+          <p style="max-width: 380px; color: var(--text-secondary); font-size: 14px; font-weight: 500;">
+            Choose an animation sticker and click anywhere on the canvas to stamp! Drag decals around like real animation studio stickers.
+          </p>
+        </div>
+
+        <div class="sticker-lab-card">
+          <div class="sticker-lab-header">
+            <div class="sticker-tools">
+              <span style="font-family: var(--font-display); font-size: 12px; font-weight: 800; margin-right: 8px;">SELECT STAMP:</span>
+              <button class="sticker-btn active hover-target" data-type="pop" style="background: var(--accent-yellow);">
+                <span>✦ POP!</span>
+              </button>
+              <button class="sticker-btn hover-target" data-type="flame">
+                <span>🔥 BEAST</span>
+              </button>
+              <button class="sticker-btn hover-target" data-type="lightning">
+                <span>⚡ HYPER</span>
+              </button>
+              <button class="sticker-btn hover-target" data-type="love">
+                <span>💖 LOVE</span>
+              </button>
+            </div>
+
+            <button class="btn-secondary hover-target" id="clearCanvasBtn" style="padding: 8px 18px; font-size: 12px;">
+              <i data-lucide="trash-2" style="width: 13px; height: 13px;"></i>
+              <span>Clear Canvas</span>
+            </button>
+          </div>
+
+          <div class="sticker-canvas" id="stickerCanvas">
+            <div class="canvas-watermark">ARTIST.GARRY // MOTION PLAYGROUND</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CREATIVE PROCESS (4-STEP TIMELINE)
+         ========================================================================== -->
+    <section class="section" id="process" style="background: var(--bg-canvas-subtle); border-top: 3px solid var(--border-dark); border-bottom: 3px solid var(--border-dark);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div>
+            <div class="section-tag">
+              <i data-lucide="layers" style="width: 13px; height: 13px;"></i>
+              <span>THE ANIMATION & DESIGN METHOD</span>
+            </div>
+            <h2 class="section-title">
+              HOW VISIONS <span class="serif-flair">Come to Life</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="process-grid">
+          
+          <div class="process-card">
+            <div class="process-num">01</div>
+            <h3 class="process-title">Spark & Chaos</h3>
+            <p class="process-desc">
+              Uncovering the brand energy, moodboarding, color theory, and sketching initial layout blueprints.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">02</div>
+            <h3 class="process-title">Stage & Lighting</h3>
+            <p class="process-desc">
+              Setting up 3D pedestals, ambient rim lights, water splashes, clouds, or architectural cutouts.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">03</div>
+            <h3 class="process-title">Vector & Shading</h3>
+            <p class="process-desc">
+              Precision vectors, typography hierarchy, callout tags, and dynamic liquid / food compositing.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">04</div>
+            <h3 class="process-title">Sweet Polish</h3>
+            <p class="process-desc">
+              High-contrast grading, camera glow, print prep (300DPI), and multi-platform asset packaging.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CREATIVE TOOLKIT
+         ========================================================================== -->
+    <section class="section" id="toolkit">
+      <div class="container">
+        
+        <div class="section-header">
+          <div>
+            <div class="section-tag">
+              <i data-lucide="cpu" style="width: 13px; height: 13px;"></i>
+              <span>SOFTWARE PROFICIENCY</span>
+            </div>
+            <h2 class="section-title">
+              CREATIVE <span class="serif-flair">Toolkit</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="toolkit-grid">
+          
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="tool-name">Adobe Photoshop</span>
+              <span class="tool-level">98%</span>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary);">Commercial Retouching, Lighting Manipulation, Splash Compositing</p>
+            <div class="tool-bar-wrap"><div class="tool-bar-fill" style="width: 98%;"></div></div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="tool-name">Adobe Illustrator</span>
+              <span class="tool-level">95%</span>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary);">Vector Character Portraits, Custom Logotypes, Typography Hierarchy</p>
+            <div class="tool-bar-wrap"><div class="tool-bar-fill" style="width: 95%; background: var(--accent-yellow);"></div></div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="tool-name">Digital Painting</span>
+              <span class="tool-level">92%</span>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary);">Spiritual Sikh Heritage Art, Historical Montages, Textured Brushes</p>
+            <div class="tool-bar-wrap"><div class="tool-bar-fill" style="width: 92%; background: var(--accent-blue);"></div></div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="tool-name">Lighting & 3D Shading</span>
+              <span class="tool-level">90%</span>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary);">Product Studio Lighting, Neon Glow Simulation, Material Reflections</p>
+            <div class="tool-bar-wrap"><div class="tool-bar-fill" style="width: 90%; background: var(--accent-purple);"></div></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         COMMISSION SERVICES & PRICING
+         ========================================================================== -->
+    <section class="section" id="pricing" style="background: var(--bg-canvas-subtle); border-top: 3px solid var(--border-dark);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div>
+            <div class="section-tag">
+              <i data-lucide="ticket" style="width: 13px; height: 13px;"></i>
+              <span>TRANSPARENT RATES</span>
+            </div>
+            <h2 class="section-title">
+              COMMISSION <span class="serif-flair">Packages</span>
+            </h2>
+          </div>
+          <p style="max-width: 340px; color: var(--text-secondary); font-size: 14px; font-weight: 500;">
+            Book professional commercial posters, product advertisements, custom vector portraits, or cultural digital paintings.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Package 1 -->
+          <div class="pricing-ticket">
+            <div>
+              <h3 class="pricing-tier">Product / Social Ad</h3>
+              <div class="pricing-amount">$50 <span>/ ₹3,999</span></div>
+              <p style="font-size: 14px; color: var(--text-secondary);">High-contrast e-commerce poster, restaurant ad, or social media key visual.</p>
+              
+              <ul class="pricing-features">
+                <li>1 High-Impact Product Poster</li>
+                <li>High-Res 300DPI Files for Instagram / Meta Ads</li>
+                <li>Lighting Retouching & Dynamic Stage</li>
+                <li>2 Revisions Included</li>
+                <li>Commercial Use Rights</li>
+              </ul>
+            </div>
+
+            <a href="#contact" class="btn-secondary hover-target" style="text-align: center; justify-content: center;">
+              Book Single Ad
+            </a>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="pricing-ticket featured">
+            <div>
+              <div class="logo-badge" style="display: inline-block; margin-bottom: 10px; background: var(--accent-orange); color: #FFF;">MOST POPULAR ✦</div>
+              <h3 class="pricing-tier">Campaign Suite</h3>
+              <div class="pricing-amount">$150 <span>/ ₹11,999</span></div>
+              <p style="font-size: 14px; color: var(--text-secondary);">Complete multi-product campaign, sneaker editorial, or restaurant menu suite.</p>
+              
+              <ul class="pricing-features">
+                <li>3 Multi-Format Creative Variations (Feed + Story)</li>
+                <li>Custom Typography & Spec Sheet Callouts</li>
+                <li>Colorway Insets & Badge System</li>
+                <li>Full Commercial & Print Ready Master Files</li>
+                <li>Priority Fast Turnaround</li>
+              </ul>
+            </div>
+
+            <a href="#contact" class="btn-primary hover-target" style="text-align: center; justify-content: center;">
+              Book Campaign
+            </a>
+          </div>
+
+          <!-- Package 3 -->
+          <div class="pricing-ticket">
+            <div>
+              <h3 class="pricing-tier">Custom Digital Art</h3>
+              <div class="pricing-amount">$200 <span>/ ₹15,999</span></div>
+              <p style="font-size: 14px; color: var(--text-secondary);">Bespoke Vector Portrait, Cultural / Sikh Digital Painting, or Brand Heritage Montage.</p>
+              
+              <ul class="pricing-features">
+                <li>100% Custom Illustrated Digital Art / Vector</li>
+                <li>Fine Art Print Ready (A1/A2 Ultra High-Res)</li>
+                <li>Complex Layering, Texture Brushes & Gurmukhi</li>
+                <li>Full Artwork Ownership & Video Timelapse</li>
+                <li>Dedicated 1-on-1 Artist Consultation</li>
+              </ul>
+            </div>
+
+            <a href="#contact" class="btn-secondary hover-target" style="text-align: center; justify-content: center;">
+              Commission Art
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT THE ARTIST
+         ========================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        
+        <div class="about-grid">
+          
+          <div class="curated-art-frame hover-view open-lightbox" data-img="assets/garry_portrait.jpg" data-title="GARRY // VISUAL ARTIST & DESIGNER">
+            <img src="assets/garry_portrait.jpg" alt="Garry - Visual Artist & Designer" loading="lazy">
+          </div>
+
+          <div>
+            <div class="section-tag">
+              <i data-lucide="smile" style="width: 13px; height: 13px;"></i>
+              <span>THE ARTIST & CREATIVE MINDS</span>
+            </div>
+
+            <h2 class="section-title">
+              CRAFTING WITH <span class="serif-flair">Impact.</span>
+            </h2>
+
+            <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+              I am <strong>Garry</strong> (known online as <em>Artist Gxrry</em>), a visual artist and graphic designer obsessed with high-contrast product advertising, energetic food & beverage posters, editorial sneaker layouts, and deeply meaningful cultural/spiritual digital paintings.
+            </p>
+
+            <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px;">
+              My philosophy combines warm characterful aesthetics, stark lighting contrast, and emotional storytelling. Every piece is built to stop people in their tracks and convert viewers into believers.
+            </p>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px;">
+              <a href="https://www.instagram.com/igxrrry" target="_blank" rel="noopener" class="btn-secondary hover-target" style="padding: 8px 16px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px;">
+                <span>📸 @igxrrry (Instagram)</span>
+              </a>
+              <a href="https://www.snapchat.com/@im.gxrry" target="_blank" rel="noopener" class="btn-secondary hover-target" style="padding: 8px 16px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px;">
+                <span>👻 @im.gxrry (Snapchat)</span>
+              </a>
+              <a href="https://www.linkedin.com/in/igxrry/" target="_blank" rel="noopener" class="btn-secondary hover-target" style="padding: 8px 16px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px;">
+                <span>💼 in/igxrry (LinkedIn)</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION & FOOTER
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+          
+          <div>
+            <div class="section-tag">
+              <i data-lucide="send" style="width: 13px; height: 13px;"></i>
+              <span>GET IN TOUCH</span>
+            </div>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 20px;">
+              HAVE A VISION?<br>
+              <span class="serif-flair">Let's Build It.</span>
+            </h2>
+
+            <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.7; margin-bottom: 30px;">
+              Ready to elevate your product sales with punchy advertising, or commission a custom digital painting? Fill out the brief below and let's get started.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; font-family: var(--font-mono); font-size: 13px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <i data-lucide="mail" style="color: var(--accent-orange);"></i>
+                <a href="mailto:artist.gxrry@gmail.com" style="color: var(--text-main); font-weight: 700; text-decoration: none;">artist.gxrry@gmail.com</a>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <i data-lucide="clock" style="color: var(--accent-orange);"></i>
+                <span>LOCAL TIME: <strong id="liveTimeClock">--:--:-- IST</strong></span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <i data-lucide="map-pin" style="color: var(--accent-orange);"></i>
+                <span>LOCATION: PUNJAB, INDIA // REMOTE WORLDWIDE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); window.handleFormSubmit();">
+            <div class="form-group">
+              <label class="form-label" for="clientName">YOUR NAME / BRAND</label>
+              <input type="text" id="clientName" name="name" class="form-input hover-target" placeholder="e.g. Beast Life / Nike / Personal Commission" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="clientEmail">EMAIL ADDRESS</label>
+              <input type="email" id="clientEmail" name="email" class="form-input hover-target" placeholder="yourname@domain.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="projectType">COMMISSION TYPE</label>
+              <select id="projectType" name="commission_type" class="form-input hover-target">
+                <option value="Product / Commercial Ad Poster ($50 / ₹3,999)">Product / Commercial Ad Poster ($50 / ₹3,999)</option>
+                <option value="Full Campaign Suite (3 Ads) ($150 / ₹11,999)">Full Campaign Suite (3 Ads) ($150 / ₹11,999)</option>
+                <option value="Custom Digital Art / Sikh Heritage Painting ($200 / ₹15,999)">Custom Digital Art / Sikh Heritage Painting ($200 / ₹15,999)</option>
+                <option value="Custom Vector Portrait ($80 / ₹5,999)">Custom Vector Portrait ($80 / ₹5,999)</option>
+                <option value="Other / Custom Inquiry">Other / Custom Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="clientMessage">PROJECT BRIEF</label>
+              <textarea id="clientMessage" name="message" class="form-textarea hover-target" placeholder="Describe the product, target vibe, deadline, or reference images..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary hover-target" id="submitBtn" style="justify-content: center;">
+              <span>Send Commission Inquiry</span>
+              <i data-lucide="send"></i>
+            </button>
+            <p id="formSuccessMessage" style="display: none; font-family: var(--font-display); font-size: 13px; font-weight: 800; color: var(--accent-green); margin-top: 10px;">
+              ✓ Inquiry sent successfully to artist.gxrry@gmail.com! Garry will reply within 24 hours.
+            </p>
+          </form>
+
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 ARTIST.GARRY. ALL RIGHTS RESERVED.</div>
+          
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+            <a href="https://www.instagram.com/igxrrry" target="_blank" rel="noopener" class="hover-target" style="color: var(--text-main); text-decoration: none;">📸 @IGXRRRY</a>
+            <a href="https://www.snapchat.com/@im.gxrry" target="_blank" rel="noopener" class="hover-target" style="color: var(--text-main); text-decoration: none;">👻 @IM.GXRRY</a>
+            <a href="https://www.linkedin.com/in/igxrry/" target="_blank" rel="noopener" class="hover-target" style="color: var(--text-main); text-decoration: none;">💼 IN/IGXRRY</a>
+          </div>
+
+          <button class="btn-secondary hover-target" id="backToTopBtn" style="padding: 6px 16px; font-size: 12px;">
+            <span>BACK TO TOP ↑</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       MODAL / LIGHTBOX
+       ========================================================================== -->
+  <div class="modal-overlay" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content-wrap">
+      <button class="modal-close-btn hover-target" id="modalCloseBtn">✕ CLOSE [ESC]</button>
+      <button class="modal-nav-btn modal-nav-prev hover-target" id="modalPrevBtn" title="Previous Artwork" aria-label="Previous">◀</button>
+      <button class="modal-nav-btn modal-nav-next hover-target" id="modalNextBtn" title="Next Artwork" aria-label="Next">▶</button>
+      <img src="" alt="Artwork Preview" class="modal-img" id="modalImg">
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
